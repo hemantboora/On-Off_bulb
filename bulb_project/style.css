@@ -1,0 +1,13 @@
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    /* background-color: rgb(55, 42, 42); */
+}
+#img_blub{
+    width: 80px;
+    height: 120px;
+    display: inline-block;
+}
