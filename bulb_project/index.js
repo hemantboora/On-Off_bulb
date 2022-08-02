@@ -1,14 +1,22 @@
-let imgs=document.querySelector("#img_blub");
-let btm=document.querySelector("#btn").value;
-
-btn.addEventListener('click',function(){
-  alert(typeof(btm))  
-    if(btm=='On Blub')
+let count=0;
+const img=document.getElementById("img_blub");
+const btn=document.getElementById("btn");
+const mainDiv=document.getElementById("container");
+const showText=document.getElementById("showText");
+function toggle(){
+    if(count%2==0)
     {
-        imgs.src="./images/on-blub.jpg";
-        btm.value='Off Blub';
+        img.src="./images/on-blub.jpg";
+        btn.innerText='Off Blub';
+        mainDiv.style.backgroundColor='rgb(240,245,220)';
+        showText.innerText='Click the button to turn off the bulb (bhai ab off be kr de "Save Electricity")';
+        count++;
     }else{
-        imgs.src="./images/off-blub.png";
-        btm.value='On Blub';  
+        img.src="./images/off-blub.png";
+        btn.innerText='On Blub';  
+        mainDiv.style.backgroundColor='rgb(87,35,35)';
+        showText.innerText="Click the button to turn on the bulb";
+        count++;
     }
-});
+    // count++;
+}
